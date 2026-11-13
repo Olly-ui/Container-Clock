@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How it works | Container Clock</title>
+<meta name="description" content="Three steps for each container, and the steps before a container can leave the port.">
+<meta name="theme-color" content="#008751">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="notice-bar"><div class="wrap">Independent concept for NIMASA-BEAP Track 05. Not affiliated with NIMASA.</div></div>
+<div class="flag" aria-hidden="true"><i></i><i></i><i></i></div>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span>Container Clock</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="how-it-works.html" aria-current="page">How it works</a>
+      <a href="tariffs.html">Tariffs</a>
+      <a href="for-agents.html">For agents</a>
+      <a href="for-importers.html">For importers</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="faq.html">FAQ</a>
+      <a class="nav-cta" href="join.html">Join the pilot</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="band">
+  <div class="wrap stack-lg">
+    <div class="page-head">
+      <h1>How it works</h1>
+      <p class="lead">Three steps for each container. In the first version the agent enters the details. Nothing connects to government or shipping line systems.</p>
+    </div>
+    <div class="grid">
+      <div class="card"><span class="tag">Step 1</span><h2 style="font-size:1.25rem">Add a container</h2><p>Enter the container number, terminal, shipping line, size, type and landing date. The clock fills in free days and rates from the published tariffs.</p>
+        <div class="notice notice-green" style="background:var(--surface);color:var(--fg);border-color:var(--border);margin-top:6px"><span class="small muted">Container</span><br><strong style="font-size:1.2rem;font-variant-numeric:tabular-nums">TSTU 100002 2</strong><br><span class="small">Line B &middot; Terminal 2 &middot; sample data</span></div></div>
+      <div class="card"><span class="tag">Step 2</span><h2 style="font-size:1.25rem">Watch both clocks</h2><p>Terminal storage and line demurrage both count from landing. You see the days left on each and what each extra day would cost.</p>
+        <div class="notice notice-green" style="background:var(--surface);color:var(--fg);border-color:var(--border);margin-top:6px"><span class="small muted">Free days left</span><br><strong style="font-size:1.2rem;font-variant-numeric:tabular-nums">2 storage &middot; 4 demurrage</strong><br><span class="small">Storage charges start Mon 2 Nov &middot; sample data</span></div></div>
+      <div class="card"><span class="tag">Step 3</span><h2 style="font-size:1.25rem">Clear before charges start</h2><p>An alert arrives before either clock starts charging, and before a daily rate steps up, with the steps still missing.</p>
+        <div class="notice notice-green" style="background:var(--surface);color:var(--fg);border-color:var(--border);margin-top:6px"><span class="small muted">Alert</span><br><strong style="font-size:1.2rem;font-variant-numeric:tabular-nums">2 days left</strong><br><span class="small">Release paper missing &middot; sample data</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band band-soft">
+  <div class="wrap stack-lg">
+    <div class="stack">
+      <h2>Steps before the container can leave</h2>
+      <p class="lead">Each step is ticked as it is done. The list shows how many are still missing and which comes next.</p>
+    </div>
+    <ol class="release">
+      <li><span class="box" aria-hidden="true"></span><span class="what">Shipping line release (delivery order)</span><span class="where">Shipping line</span></li>
+      <li><span class="box" aria-hidden="true"></span><span class="what">Declaration lodged and duty assessed</span><span class="where">Customs, B'Odogwu</span></li>
+      <li><span class="box" aria-hidden="true"></span><span class="what">Duty paid</span><span class="where">Bank</span></li>
+      <li><span class="box" aria-hidden="true"></span><span class="what">NAFDAC or SON permit</span><span class="where">National Single Window</span></li>
+      <li><span class="box" aria-hidden="true"></span><span class="what">Physical examination</span><span class="where">Customs, at the terminal</span></li>
+      <li><span class="box" aria-hidden="true"></span><span class="what">Terminal charges paid</span><span class="where">Terminal</span></li>
+      <li><span class="box" aria-hidden="true"></span><span class="what">Exit note and gate release</span><span class="where">Customs and terminal gate</span></li>
+    </ol>
+    <p class="fine">The order and the steps can differ by cargo and by terminal. Agents can edit the list for each container.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap split">
+    <div class="stack">
+      <h2>What it does</h2>
+      <ul class="checklist">
+        <li>Counts free days on two clocks from the landing date: terminal storage and line demurrage</li>
+        <li>Shows the date charges start and what each extra day costs, including the steps up in the daily rate</li>
+        <li>Counts working days left, since weekends use up free days but release work cannot happen on them</li>
+        <li>Ranks your containers by what one more day of holding costs, so you know which to clear first</li>
+        <li>Lists the steps still missing before release</li>
+        <li>Sends an alert before charges start and before a rate steps up</li>
+        <li>Keeps a dated log of each stage</li>
+      </ul>
+    </div>
+    <div class="stack">
+      <h2>What it does not do</h2>
+      <ul class="plain-list">
+        <li>It does not connect to the National Single Window, Customs, the port authority or shipping line systems.</li>
+        <li>It does not file declarations or pay anything for you.</li>
+        <li>It does not replace the terminal's charge statement, which is the final figure.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>Independent concept for the NIMASA-BEAP National Innovation Hackathon, Track 05. Not affiliated with or endorsed by NIMASA. Figures shown are samples until real rules are collected. Contact: <a href="mailto:oshomodelakure@gmail.com">oshomodelakure@gmail.com</a></p>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="tariffs.html">Tariffs</a>
+      <a href="for-agents.html">For agents</a>
+      <a href="for-importers.html">For importers</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="faq.html">FAQ</a>
+      <a href="join.html">Join the pilot</a>
+      <a href="privacy.html">Privacy and contact</a>
+    </nav>
+  </div>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>

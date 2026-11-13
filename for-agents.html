@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>For clearing agents | Container Clock</title>
+<meta name="description" content="One list of containers with the days left on each, the cost per extra day and what is missing.">
+<meta name="theme-color" content="#008751">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="notice-bar"><div class="wrap">Independent concept for NIMASA-BEAP Track 05. Not affiliated with NIMASA.</div></div>
+<div class="flag" aria-hidden="true"><i></i><i></i><i></i></div>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span>Container Clock</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="how-it-works.html">How it works</a>
+      <a href="tariffs.html">Tariffs</a>
+      <a href="for-agents.html" aria-current="page">For agents</a>
+      <a href="for-importers.html">For importers</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="faq.html">FAQ</a>
+      <a class="nav-cta" href="join.html">Join the pilot</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="band">
+  <div class="wrap stack-lg">
+    <div class="page-head">
+      <span class="eyebrow">First version</span>
+      <h1>For clearing agents</h1>
+      <p class="lead">You already count free days by hand. The clock does the counting, and tells you before charges start.</p>
+    </div>
+
+    <div class="stack">
+      <h2 style="font-size:1.25rem">Your container list</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Container</th><th>Line and terminal</th><th class="num">Storage left</th><th class="num">Demurrage left</th><th>Status</th><th>Next step</th></tr></thead>
+          <tbody>
+            <tr><td><strong>TSTU 100001 1</strong></td><td>Line A &middot; Terminal 1</td><td class="num">Over by 1</td><td class="num">Last day</td><td><span class="chip chip-red"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M5.5 5.5l5 5M10.5 5.5l-5 5"/></svg>Charges running</span></td><td>Pay terminal charges</td></tr>
+            <tr><td><strong>TSTU 100002 2</strong></td><td>Line B &middot; Terminal 2</td><td class="num">1</td><td class="num">3</td><td><span class="chip chip-amber"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2l6.3 11H1.7z"/><path d="M8 6.5v3.2M8 11.6v.1"/></svg>At risk</span></td><td>Shipping line release</td></tr>
+            <tr><td><strong>TSTU 100003 3</strong></td><td>Line A &middot; Terminal 2</td><td class="num">3</td><td class="num">5</td><td><span class="chip chip-green"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M5 8.2l2.2 2.2L11 6.2"/></svg>On track</span></td><td>Lodge declaration</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fine">Sample data. Containers that need action sort to the top.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band band-soft">
+  <div class="wrap stack-lg">
+    <h2>What you get</h2>
+    <div class="grid">
+      <div class="card"><h3>Two clocks</h3><p>Days left on terminal storage and on line demurrage, counted from landing, with the date each starts charging.</p></div>
+      <div class="card"><h3>Real rates, including step-ups</h3><p>Rates come from the published tariffs. The total if the container stays shows what a delay costs, with the daily rate stepping up as it does on the terminal's invoice.</p></div>
+      <div class="card"><h3>Missing steps</h3><p>A list of the steps before release, with how many are left and which comes next.</p></div>
+      <div class="card"><h3>An alert before charges start</h3><p>A warning with time to act, also before a daily rate steps up.</p></div>
+      <div class="card"><h3>Free time you agreed</h3><p>Add the extra free days you agreed with the line or terminal, and the clock moves its dates.</p></div>
+      <div class="card"><h3>Terminal statement field</h3><p>Enter the terminal's charge statement and any waiver, so the record ends on the real figure.</p></div>
+      <div class="card"><h3>A phone view</h3><p>A single light screen that works on weak connections.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap split">
+    <div class="stack">
+      <h2>What the pilot asks of you</h2>
+      <ul class="checklist">
+        <li>Tell us about your last container that went over its free days, and what caused it.</li>
+        <li>Tell us which free days and rates you actually get, since agreed free time can differ from the published tariff.</li>
+        <li>Try the clock on live containers and tell us what to change.</li>
+      </ul>
+    </div>
+    <div class="card card-soft">
+      <h3>Not live yet</h3>
+      <p>The pilot is for agents in Lagos. The first version relies on what you enter. It does not read data from shipping lines, terminals or government systems.</p>
+      <div class="cta-row" style="margin-top:8px"><a class="btn" href="join.html">Join the pilot</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>Independent concept for the NIMASA-BEAP National Innovation Hackathon, Track 05. Not affiliated with or endorsed by NIMASA. Figures shown are samples until real rules are collected. Contact: <a href="mailto:oshomodelakure@gmail.com">oshomodelakure@gmail.com</a></p>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="tariffs.html">Tariffs</a>
+      <a href="for-agents.html">For agents</a>
+      <a href="for-importers.html">For importers</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="faq.html">FAQ</a>
+      <a href="join.html">Join the pilot</a>
+      <a href="privacy.html">Privacy and contact</a>
+    </nav>
+  </div>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Container Clock</title>
+<meta name="description" content="Two clocks for each container, terminal storage and line demurrage, with real rates from published tariffs and an alert before charges start. A concept for clearing agents in Lagos.">
+<meta name="theme-color" content="#008751">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="notice-bar"><div class="wrap">Independent concept for NIMASA-BEAP Track 05. Not affiliated with NIMASA.</div></div>
+<div class="flag" aria-hidden="true"><i></i><i></i><i></i></div>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span>Container Clock</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="how-it-works.html">How it works</a>
+      <a href="tariffs.html">Tariffs</a>
+      <a href="for-agents.html">For agents</a>
+      <a href="for-importers.html">For importers</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="faq.html">FAQ</a>
+      <a class="nav-cta" href="join.html">Join the pilot</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="band band-soft">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>Know how many free days a container has left, and what each extra day costs.</h1>
+      <p class="lead">Two clocks for each container, terminal storage and shipping line demurrage, with an alert before charges start.</p>
+      <div class="cta-row">
+        <a class="btn" href="join.html">Join the agent pilot</a>
+        <a class="btn btn-ghost" href="how-it-works.html">See how it works</a>
+      </div>
+      <p class="fine">A concept for clearing agents in Lagos, in early design. Not live yet.</p>
+    </div>
+    <aside class="card" aria-labelledby="facts-h" style="gap:14px">
+      <h2 id="facts-h" style="font-size:1.1rem">What the published tariffs show</h2>
+      <ul class="facts">
+        <li><strong>Two clocks</strong><span>The terminal charges storage. The shipping line charges demurrage. They start together and end on different days.</span></li>
+        <li><strong>5 days and 7 days</strong><span>Free storage at APM, TICT, Lekki and PTML, and free demurrage in the Grimaldi tariff.</span></li>
+        <li><strong>₦13,608, ₦66,528, ₦90,720</strong><span>What APM charges a day for a 40 ft dry container, from day 6, day 9 and day 14.</span></li>
+      </ul>
+      <a href="tariffs.html"><strong>See the tariffs</strong></a>
+    </aside>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap stack-lg">
+    <div class="stack">
+      <h2>Try the clock</h2>
+      <p class="lead">Pick your terminal and shipping line. The clock uses their published rates and counts the landing day as day 1.</p>
+    </div>
+    <div class="calc-grid">
+      <form id="calc" class="calc-form" novalidate>
+        <fieldset>
+          <legend>Dates</legend>
+          <div class="field"><label for="c-land">Landing date</label><input id="c-land" name="landing" type="date"></div>
+          <div class="field"><label for="c-today">Today</label><input id="c-today" name="today" type="date"></div>
+          <div class="field"><label for="c-gate">Planned gate-out date</label><input id="c-gate" name="gateout" type="date"></div>
+          <div class="field"><label for="c-wk">Days your terminal and customs work</label>
+            <select id="c-wk" name="workdays"><option value="5">Monday to Friday</option><option value="6">Monday to Saturday</option></select>
+            <span class="hint">Free days are calendar days, but release work needs working days.</span></div>
+        </fieldset>
+        <fieldset>
+          <legend>Container</legend>
+          <div class="field"><label for="c-size">Size</label>
+            <select id="c-size" name="size"><option value="20">20 ft</option><option value="40">40 ft</option><option value="45">45 ft</option></select></div>
+        </fieldset>
+        <fieldset>
+          <legend>Terminal storage</legend>
+          <div class="field"><label for="c-term">Terminal</label><select id="c-term" name="terminal"></select></div>
+          <div class="field"><label for="c-ttype">Container type</label><select id="c-ttype" name="terminalType"></select></div>
+          <div id="c-tcust" class="field" hidden>
+            <div class="two">
+              <div class="field"><label for="c-tcfree">Free days</label><input id="c-tcfree" type="text" inputmode="numeric" autocomplete="off"></div>
+              <div class="field"><label for="c-tcrate">Daily rate (&#8358;)</label><input id="c-tcrate" type="text" inputmode="numeric" autocomplete="off"></div>
+            </div>
+          </div>
+          <div class="field"><label for="c-text">Extra free days agreed <span class="opt">(optional)</span></label><input id="c-text" type="text" inputmode="numeric" autocomplete="off"></div>
+        </fieldset>
+        <fieldset>
+          <legend>Line demurrage</legend>
+          <div class="field"><label for="c-line">Shipping line</label><select id="c-line" name="line"></select></div>
+          <div class="field"><label for="c-ltype">Container type</label><select id="c-ltype" name="lineType"></select></div>
+          <div id="c-lcust" class="field" hidden>
+            <div class="two">
+              <div class="field"><label for="c-lcfree">Free days</label><input id="c-lcfree" type="text" inputmode="numeric" autocomplete="off"></div>
+              <div class="field"><label for="c-lcrate">Daily rate (&#8358;)</label><input id="c-lcrate" type="text" inputmode="numeric" autocomplete="off"></div>
+            </div>
+          </div>
+          <div class="field"><label for="c-lext">Extra free days agreed <span class="opt">(optional)</span></label><input id="c-lext" type="text" inputmode="numeric" autocomplete="off"></div>
+        </fieldset>
+      </form>
+      <div class="calc-results">
+        <div id="calc-error" class="notice notice-red" role="alert" hidden>Enter valid dates and whole numbers to see the result.</div>
+        <div id="calc-out" aria-live="polite" class="calc-results"></div>
+        <noscript><p class="notice notice-amber">The clock needs JavaScript to run.</p></noscript>
+        <p class="fine">Estimate. Rates are copied from the published tariffs listed on the <a href="tariffs.html">tariffs page</a>. They exclude reefer power and other terminal and line charges. Extra free days move the whole rate schedule back by that many days. The terminal's charge statement is the final figure. The dates and container shown when the page opens are samples.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band band-soft">
+  <div class="wrap stack-lg">
+    <div class="stack">
+      <h2>Which container first?</h2>
+      <p class="lead">When trucks, cash or paperwork limit what you can clear today, clear the container that costs most to hold one more day. Rates step up in bands, so the container with the most free days left is not always the safest to leave.</p>
+    </div>
+    <div id="rank-rows" class="rank-grid"></div>
+    <div id="rank-out" class="stack" aria-live="polite"></div>
+    <p class="fine">The four containers are samples. Change the dates, terminals and sizes to match yours. The order covers dry containers and uses the same tariffs as the clock above, and the date comes from the clock's Today field.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap stack-lg">
+    <h2>How it works</h2>
+    <div class="grid">
+      <div class="card"><div class="step-no">1</div><h3>Add a container</h3><p>Enter the container number, terminal, shipping line, size, type and landing date. The clock fills in free days and rates from the published tariffs.</p></div>
+      <div class="card"><div class="step-no">2</div><h3>Watch both clocks</h3><p>See the days left on terminal storage and on line demurrage, what each extra day costs, and which steps are still missing.</p></div>
+      <div class="card"><div class="step-no">3</div><h3>Clear before charges start</h3><p>Get an alert before either clock starts charging, and before a daily rate steps up.</p></div>
+    </div>
+    <p><a href="how-it-works.html"><strong>Read the details</strong></a></p>
+  </div>
+</section>
+
+<section class="band band-soft">
+  <div class="wrap stack-lg">
+    <div class="stack">
+      <h2>What we heard</h2>
+      <p class="muted">From one interview with a freight forwarder. This is one person's account, not a statistic.</p>
+    </div>
+    <div class="grid grid-2">
+      <figure class="card" style="margin:0"><div class="quote">Agents count the days by hand, and no alert warns them before charges start.</div><figcaption class="small muted">Freight forwarder interview</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap stack-lg">
+    <h2>Who it is for</h2>
+    <div class="grid grid-2">
+      <div class="card"><span class="tag">First version</span><h3>Clearing agents</h3><p>One list of containers, the days left on each, and an alert before charges start.</p><a href="for-agents.html"><strong>For agents</strong></a></div>
+      <div class="card"><span class="tag">Later</span><h3>Importers</h3><p>See the days and charges on your own containers, and know when your agent has finished each step.</p><a href="for-importers.html"><strong>For importers</strong></a></div>
+    </div>
+  </div>
+</section>
+
+<section class="band band-soft">
+  <div class="wrap stack-lg">
+    <h2>Three phases</h2>
+    <div class="grid">
+      <div class="card"><span class="tag">Phase 1</span><h3>The agent clock</h3><p>Countdown, cost clock, steps list and alerts, using details the agent enters.</p></div>
+      <div class="card"><span class="tag">Phase 2</span><h3>Port activity view</h3><p>Vessel, shipping line and terminal status for each container, with days and charges by party.</p></div>
+      <div class="card"><span class="tag">Phase 3</span><h3>Trucks, exports and network</h3><p>Truck call-up status, export containers, and a job board for importers and licensed agents.</p></div>
+    </div>
+    <p><a href="roadmap.html"><strong>Read the full roadmap</strong></a></p>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>Independent concept for the NIMASA-BEAP National Innovation Hackathon, Track 05. Not affiliated with or endorsed by NIMASA. Figures shown are samples until real rules are collected. Contact: <a href="mailto:oshomodelakure@gmail.com">oshomodelakure@gmail.com</a></p>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="tariffs.html">Tariffs</a>
+      <a href="for-agents.html">For agents</a>
+      <a href="for-importers.html">For importers</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="faq.html">FAQ</a>
+      <a href="join.html">Join the pilot</a>
+      <a href="privacy.html">Privacy and contact</a>
+    </nav>
+  </div>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>

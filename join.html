@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Join the pilot | Container Clock</title>
+<meta name="description" content="Tell us how you work today. We plan to test the clock with clearing agents in Lagos.">
+<meta name="theme-color" content="#008751">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="notice-bar"><div class="wrap">Independent concept for NIMASA-BEAP Track 05. Not affiliated with NIMASA.</div></div>
+<div class="flag" aria-hidden="true"><i></i><i></i><i></i></div>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span>Container Clock</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="how-it-works.html">How it works</a>
+      <a href="tariffs.html">Tariffs</a>
+      <a href="for-agents.html">For agents</a>
+      <a href="for-importers.html">For importers</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="faq.html">FAQ</a>
+      <a class="nav-cta" href="join.html" aria-current="page">Join the pilot</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="band">
+  <div class="wrap split">
+    <div class="stack-lg" style="min-width:0">
+      <div class="page-head">
+        <h1>Join the pilot</h1>
+        <p class="lead">We plan to test the clock with clearing agents in Lagos. Tell us how you work today and we will contact you.</p>
+      </div>
+      <div class="card card-soft">
+        <h2 style="font-size:1.1rem">What happens next</h2>
+        <ol class="plain-list">
+          <li>We read your answers.</li>
+          <li>We contact you to ask about your last container.</li>
+          <li>You try the clock and tell us what to change.</li>
+        </ol>
+      </div>
+      <p class="small" style="color:var(--soft)"><strong>Privacy.</strong> We use your details only to contact you about the pilot. We do not share them. You can ask us to delete them at any time at <a href="mailto:oshomodelakure@gmail.com">oshomodelakure@gmail.com</a>. <a href="privacy.html">Read more</a>.</p>
+    </div>
+
+    <section class="form-panel" aria-labelledby="form-h">
+      <h2 id="form-h" style="font-size:1.4rem;margin-bottom:16px">Your details</h2>
+      <div id="join-error" class="notice notice-red" role="alert" hidden style="margin-bottom:16px"></div>
+      <form id="join" class="form" novalidate>
+        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name"></div>
+        <div class="field"><label for="f-role">Your role</label>
+          <select id="f-role" name="role">
+            <option value="">Choose one</option>
+            <option value="Clearing agent">Clearing agent</option>
+            <option value="Importer">Importer</option>
+            <option value="Exporter">Exporter</option>
+            <option value="Other">Other</option>
+          </select></div>
+        <div class="field"><label for="f-co">Company <span class="opt">(optional)</span></label><input id="f-co" name="company" type="text" autocomplete="organization"></div>
+        <div class="field"><label for="f-ph">Phone or WhatsApp number</label><input id="f-ph" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="two">
+          <div class="field"><label for="f-n">Containers per month</label><input id="f-n" name="containersPerMonth" type="text" inputmode="numeric"></div>
+          <div class="field"><label for="f-l">Shipping lines and terminals you use</label><input id="f-l" name="linesAndTerminals" type="text"></div>
+        </div>
+        <div class="field"><label for="f-q">What was your last extra charge, and what caused it? <span class="opt">(optional)</span></label><textarea id="f-q" name="lastExtraCharge" rows="3"></textarea></div>
+        <div class="consent"><input id="f-c" name="consent" type="checkbox"><label for="f-c">I agree that my details are stored and used to contact me about the pilot.</label></div>
+        <button id="join-submit" class="btn btn-block" type="submit">Join the pilot</button>
+      </form>
+
+      <div id="join-done" role="status" tabindex="-1" hidden class="notice notice-green" style="padding:22px">
+        <h2 style="font-size:1.35rem;margin-bottom:8px">Thank you, we have your details.</h2>
+        <p>We will contact you on the number you gave.</p>
+      </div>
+
+      <div id="join-fallback" role="status" tabindex="-1" hidden class="stack">
+        <div class="notice notice-amber">
+          <strong>Nothing has been sent.</strong> This form is not connected to an inbox yet. Copy your answers and send them to <a href="mailto:oshomodelakure@gmail.com">oshomodelakure@gmail.com</a> or <a href="https://wa.me/2348168460256">08168460256</a>.
+        </div>
+        <label class="label" for="join-copy">Your answers</label>
+        <textarea id="join-copy" class="copybox" readonly></textarea>
+        <div class="cta-row"><button id="join-copy-btn" class="btn" type="button">Copy answers</button></div>
+        <p id="join-copy-msg" class="small muted" role="status"></p>
+      </div>
+    </section>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>Independent concept for the NIMASA-BEAP National Innovation Hackathon, Track 05. Not affiliated with or endorsed by NIMASA. Figures shown are samples until real rules are collected. Contact: <a href="mailto:oshomodelakure@gmail.com">oshomodelakure@gmail.com</a></p>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="tariffs.html">Tariffs</a>
+      <a href="for-agents.html">For agents</a>
+      <a href="for-importers.html">For importers</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="faq.html">FAQ</a>
+      <a href="join.html">Join the pilot</a>
+      <a href="privacy.html">Privacy and contact</a>
+    </nav>
+  </div>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>
